@@ -8,6 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using NetworkAttackPreventionProject.DAL;
+using NetworkAttackPreventionProject.Models;
 
 namespace NetworkAttackPreventionProject
 {
@@ -23,7 +27,20 @@ namespace NetworkAttackPreventionProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+                services.AddControllersWithViews();
+                services.AddDbContext<AppDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Default")));
+                services.AddIdentity<ApplicationUser, IdentityRole>()
+                    .AddEntityFrameworkStores<AppDbContext>()
+                    .AddDefaultTokenProviders();
+                services.Configure<IdentityOptions>(Options =>
+                {
+                    Options.Password.RequiredLength = 8;
+                    Options.Password.RequireNonAlphanumeric = false;
+                    Options.Password.RequireLowercase = false;
+                    Options.Password.RequireUppercase = false;
+                    Options.Password.RequireDigit = true;
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
