@@ -2,12 +2,28 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using NetworkAttackPreventionProject.Models;
+using NetworkAttackPreventionProject.ViewModels;
 
 namespace NetworkAttackPreventionProject.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public AccountController(UserManager<ApplicationUser> userManager,
+            SignInManager
+                <ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
+        }
         public IActionResult Index()
         {
             return View();
@@ -24,11 +40,8 @@ namespace NetworkAttackPreventionProject.Controllers
             if (!ModelState.IsValid) return View(model);
             ApplicationUser newUser = new ApplicationUser
             {
-                FullName = model.FullName,
-                UserName = model.Username,
-                Email = model.Email,
-                PhoneNumber = model.PhoneNumber
-
+                UserName = model.Email,
+                Email = model.Email
             };
             var identityResult = await _userManager.CreateAsync(newUser, model.Password);
             if (identityResult.Succeeded)
@@ -39,7 +52,6 @@ namespace NetworkAttackPreventionProject.Controllers
                 var Message = $"<a href=\"{Confirmation}\">Təsdiqləyin</a>";
                 if (EmailSender(model.Email, Message))
                 {
-                    await _userManager.AddToRoleAsync(newUser, UserRoles.User.ToString());
                     return RedirectToAction("ThanksRegistration", "Account");
                 }
             }
@@ -199,7 +211,6 @@ namespace NetworkAttackPreventionProject.Controllers
                             EmailConfirmed = true
                         };
                         var createResult = await _userManager.CreateAsync(user);
-                        await _userManager.AddToRoleAsync(user, UserRoles.User.ToString());
                         if (createResult.Succeeded)
                         {
                             var identityLogin = await _userManager.AddLoginAsync(user, loginInfo);

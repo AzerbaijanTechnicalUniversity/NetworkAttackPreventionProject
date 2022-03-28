@@ -1,4 +1,4 @@
-﻿
+﻿@model NetworkAttackPreventionProject.ViewModels.LoginViewModel
 @{
     Layout = null;
 }
@@ -161,16 +161,16 @@
             <div class="shape"></div>
             <div class="shape"></div>
         </div>
-        <form>
+        <form method="post">
             <h3>Daxil ol</h3>
 
-            <label for="username">Email</label>
-            <input type="text" placeholder="Email" id="username">
+            <label >Email</label>
+            <input asp-for="Email" placeholder="Email" id="username">
 
-            <label for="password">Şifrə</label>
-            <input type="password" placeholder="Şifrə" id="password">
+            <label >Şifrə</label>
+            <input asp-for="Password" placeholder="Şifrə" id="password">
 
-            <button>Daxil ol</button>
+            <button type="submit">Daxil ol</button>
             <span style="padding: 10px;">Hesabın yoxdur? <a asp-controller="Account" asp-action="Register">Qeydiyyatdan keç</a></span>
 
             <div class="social">

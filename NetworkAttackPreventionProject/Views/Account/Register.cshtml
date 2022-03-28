@@ -1,4 +1,4 @@
-﻿
+﻿@model NetworkAttackPreventionProject.ViewModels.RegisterViewModel
 @{
     Layout = null;
 }
@@ -161,19 +161,26 @@
             <div class="shape"></div>
             <div class="shape"></div>
         </div>
-        <form>
+        <form method="post" asp-controller="Account" asp-action="Register">
             <h3>Qeydiyyat</h3>
 
-            <label for="username">Email</label>
-            <input type="text" placeholder="Email" id="username">
+            @*<label>Username</label>*@
+            @*<input  asp-for="UserName" type="hidden" placeholder="Username" id="username">*@
+            @*<span asp-validation-for="UserName" class="text-danger"></span>*@
+            
+            <label>Email</label>
+            <input asp-for="Email" type="text" placeholder="Email" id="username">
+            <span asp-validation-for="Email" class="text-danger"></span>
 
-            <label for="password">Şifrə</label>
-            <input type="password" placeholder="Şifrə" id="password">
+            <label>Şifrə</label>
+            <input asp-for="Password" type="password" placeholder="Şifrə" id="password">
+            <span asp-validation-for="Password" class="text-danger"></span>
 
-            <label for="password">Şifrə təkrarı</label>
-            <input type="password" placeholder="Şifrə təkrarı" id="password">
+            <label>Şifrə təkrarı</label>
+            <input asp-for="ConfirmPassword" type="password" placeholder="Şifrə təkrarı" id="password">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
 
-            <button>Qeydiyyatdan keç</button>
+            <button type="submit">Qeydiyyatdan keç</button>
 
             <span style="padding: 10px;">Hesabın var? <a asp-controller="Account" asp-action="Login">Daxil ol</a></span>
 
