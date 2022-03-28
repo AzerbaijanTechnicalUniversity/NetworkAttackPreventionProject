@@ -159,3 +159,4 @@ C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventi
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\ThanksRegistration.cshtml.g.cs
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Debug\netcoreapp3.1\Razor\Views\Firewall\Index.cshtml.g.cs

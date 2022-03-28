@@ -315,24 +315,7 @@ namespace NetworkAttackPreventionProject.Controllers
             return View();
 
         }
-
         public IActionResult PassDetailSend()
-        {
-            return View();
-        }
-
-        //public async Task CreateRole()
-        //{
-        //    foreach (var role in Enum.GetValues(typeof(UserRoles)))
-        //    {
-        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
-        //        {
-        //            await _roleManager.CreateAsync(new IdentityRole {Name = role.ToString()});
-        //        }
-        //    }
-        //}
-
-        public IActionResult AccessDenied()
         {
             return View();
         }
