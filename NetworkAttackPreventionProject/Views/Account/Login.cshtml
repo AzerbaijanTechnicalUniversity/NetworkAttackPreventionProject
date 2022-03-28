@@ -174,8 +174,8 @@
             <span style="padding: 10px;">Hesabın yoxdur? <a asp-controller="Account" asp-action="Register">Qeydiyyatdan keç</a></span>
 
             <div class="social">
-                <div class="go"><i class="fab fa-google"></i>  Google</div>
-                <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+                <a asp-controller="Account" asp-action="GoogleLogin"><div class="go"><i class="fab fa-google"></i>  Google</div></a>
+                <a asp-controller="Account" asp-action="FacebookLogin"><div class="fb"><i class="fab fa-facebook"></i>  Facebook</div></a>
             </div>
         </form>
     </body>

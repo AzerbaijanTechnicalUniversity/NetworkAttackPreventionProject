@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3KhHEB2OMR/clHWWJqspzV5bjtnnHbJJ/vUE+zIm44OBuQ7/jz2LhT0SiErIImiPCOlNNdLkcf1C8JofLKs0gQ==",
+  "dgSpecHash": "Qja0Wk953efnPmIPJQ5v9UHAYgCeWlKstwaJJH669FuyKRWoKs5GUMGmNVNNmIEHsk/v6Uzw6ugau1NpGFDUhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\asifr\\source\\repos\\NetworkAttackPreventionProject\\NetworkAttackPreventionProject\\NetworkAttackPreventionProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\asifr\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.23\\microsoft.aspnetcore.authentication.facebook.3.1.23.nupkg.sha512",
+    "C:\\Users\\asifr\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.23\\microsoft.aspnetcore.authentication.google.3.1.23.nupkg.sha512",
     "C:\\Users\\asifr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.23\\microsoft.aspnetcore.cryptography.internal.3.1.23.nupkg.sha512",
     "C:\\Users\\asifr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.23\\microsoft.aspnetcore.cryptography.keyderivation.3.1.23.nupkg.sha512",
     "C:\\Users\\asifr\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
