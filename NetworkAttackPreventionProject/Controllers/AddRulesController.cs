@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NetworkAttackPreventionProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,15 @@ namespace NetworkAttackPreventionProject.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }   
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult Index(string command)
+        {
+            string cmd = "ping " + command;
+            //string cmd = "ipconfig";
+            ViewBag.result = ExecuteCmd.ExecuteCommandSync(cmd);
             return View();
         }
     }

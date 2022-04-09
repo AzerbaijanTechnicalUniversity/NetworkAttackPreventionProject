@@ -7,52 +7,25 @@
     <div class="container " style="padding: 1%">
         <div style="padding-left: 27%">
 
-            <form>
-
+            <form asp-controller="AddRules" asp-action="Index" style="display:flex">
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputEmail4">Source</label>
-                        <input type="email" class="form-control" id="inputEmail4" >
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputPassword4">Destination</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                    <div class="form-group ">
+                        <label for="inputPassword4">IP</label>
+                        <input autocomplete="off" name="command" class="form-control">
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputEmail4">Source</label>
-                        <input type="email" class="form-control" id="inputEmail4">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputPassword4">Destination</label>
-                        <input type="password" class="form-control" id="inputPassword4">
-                    </div>
+                <div style="padding:4%">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    @*  <button style="margin-left: 5%" type="submit" class="btn btn-danger">Cancel</button>*@
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Allow</option>
-                            <option>Deny</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>IP</option>
-                            <option>TCP</option>
-                            <option>UDP</option>
-                        </select>
-                    </div>
-                </div>
-                <div style="padding-left: 24%">
-                    <button  type="submit" class="btn btn-success">Save</button>
-                    <button style="margin-left: 5%" type="submit" class="btn btn-danger">Cancel</button>
-                </div>
-          
-
             </form>
+            <div style="width:50%">
+                <ul>
+                    <li>
+                        <span class="alert-dark">@ViewBag.result</span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
     </div>

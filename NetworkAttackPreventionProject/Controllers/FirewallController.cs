@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using NetworkAttackPreventionProject.Models;
 
 namespace NetworkAttackPreventionProject.Controllers
 {
@@ -37,6 +38,20 @@ namespace NetworkAttackPreventionProject.Controllers
         public IActionResult Disconnect()
         {
             RunCMD(@"/C netsh advfirewall firewall set rule name=""RULENAME"" new enable=no");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ActiveFirewall()
+        {
+            string cmd = "netsh Advfirewall set allprofiles state on";
+            ViewBag.result = ExecuteCmd.ExecuteCommandSync(cmd);
+            return View();
+        }  
+        [HttpPost]
+        public IActionResult DeActiveFirewall()
+        {
+            string cmd = "netsh Advfirewall set allprofiles state off";
+            ViewBag.result = ExecuteCmd.ExecuteCommandSync(cmd);
             return View();
         }
     }
