@@ -76,7 +76,13 @@
        <a asp-controller="AddRules" asp-action="Index"><button  class="btn btn-primary">Send Ping</button></a> 
         <a asp-controller="Firewall" asp-action="Disconnect" class="btn btn-info">View Rules</a>
     </div>
-    
+    <div style="text-align: center">
+        <ul>
+            <li>
+                <span class="alert-dark">@ViewData["status"]</span>
+            </li>
+        </ul>
+    </div>
 
 </div>
 
