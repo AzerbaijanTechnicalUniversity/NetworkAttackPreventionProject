@@ -165,3 +165,4 @@ C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventi
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\PassDetailSend.cshtml.g.cs
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Debug\netcoreapp3.1\Razor\Views\AddRules\Index.cshtml.g.cs
+C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Debug\netcoreapp3.1\Razor\Views\SendPing\Index.cshtml.g.cs

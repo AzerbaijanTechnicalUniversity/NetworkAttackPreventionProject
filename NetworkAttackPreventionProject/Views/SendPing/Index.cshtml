@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="justify-content:center" class="col-6">
+
+    <form asp-controller="SendPing" asp-action="AddRules">
+        <label>Rule Name</label>
+        <input class="form-control" name="rule" />
+
+
+        @*<label>in/out</label>
+            <input class="form-control" name="inout" />*@
+
+        <div class="form-group">
+            <label>in/out</label>
+            <select name="inout" class="form-control" id="exampleFormControlSelect1">
+                <option>in</option>
+                <option>out</option>
+            </select>
+        </div>
+
+        @*<label>allow/block/bypass</label>
+            <input class="form-control" name="allow" />*@
+
+        <div class="form-group">
+            <label>allow/block/bypass</label>
+            <select name="allow" class="form-control" id="exampleFormControlSelect1">
+                <option>allow</option>
+                <option>block</option>
+                <option>bypass</option>
+            </select>
+        </div>
+
+        @*<label>Protocol tcp/udp</label>
+            <input class="form-control" name="protocol" />*@
+
+        <div class="form-group">
+            <label>Protocol</label>
+            <select name="protocol" class="form-control" id="exampleFormControlSelect1">
+                <option>tcp</option>
+                <option>udp</option>
+            </select>
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">Add Rule</button>
+    </form>
+
+</div>

@@ -165,3 +165,4 @@ C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventi
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Release\netcoreapp3.1\NetworkAttackPreventionProject.dll
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Release\netcoreapp3.1\NetworkAttackPreventionProject.pdb
 C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Release\netcoreapp3.1\NetworkAttackPreventionProject.genruntimeconfig.cache
+C:\Users\asifr\source\repos\NetworkAttackPreventionProject\NetworkAttackPreventionProject\obj\Release\netcoreapp3.1\Razor\Views\SendPing\Index.cshtml.g.cs
